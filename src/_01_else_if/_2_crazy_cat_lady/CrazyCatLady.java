@@ -10,8 +10,15 @@ public class CrazyCatLady {
 		String cat = JOptionPane.showInputDialog("how many cats do you have");
 		int cats = Integer.parseInt(cat);
 		
-		if(cat.equals("3")) {
+		if(cats >= 3) {
 			JOptionPane.showMessageDialog(null, "You are a crazy cat lady");
+			
+		}
+		else if(cats < 3&& cats > 0) {
+		JOptionPane.showMessageDialog(null, "You are a normal cat person");
+		}
+		else if(cats == 0) {
+			JOptionPane.showMessageDialog(null, "guess you are a dog person");
 		}
 		
 		// 1. Ask the user how many cats they have
@@ -22,11 +29,11 @@ public class CrazyCatLady {
 		// 5. If they have 0 cats, show them a video of A Frog Sitting on a Bench Like a Human
 		
 		
-		
-		
-		
-		
 	}
+		
+		
+		
+	
 
 	static void playVideo(String videoURL) {
 		try {

@@ -3,11 +3,21 @@ package _01_else_if._3_high_low;
 
 import java.util.Random;
 
+import javax.swing.JOptionPane;
+
 public class HighLowGame {
+	
 
 	public static void main(String[] args) {
-		// 3. Change this line to give you a random number between 1 - 100. 
-		int random = new Random().nextInt(5);
+	     Random random = new Random();
+	     int randNum = random.nextInt(100 - 1 + 1) + 1;
+		String guess = JOptionPane.showInputDialog("what is your guess");
+	int person = Integer.parseInt(guess);
+		System.out.println();
+		
+		if(person == randNum) {
+			JOptionPane.showMessageDialog(null, "you win");
+		}
 		
 		// 2. Print out the random variable above
 		
